@@ -2,7 +2,7 @@
   "name": "covid19india",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://covid19india.github.io/",
+  "homepage": "http://ashish199820.github.io/covid19india-react",
   "dependencies": {
     "@material-ui/core": "^4.9.8",
     "@material-ui/icons": "^4.9.1",
@@ -11,9 +11,10 @@
     "d3-svg-legend": "^2.25.6",
     "date-fns": "^2.11.0",
     "esri-leaflet-geocoder": "^2.3.2",
+    "gh-pages": "^2.2.0",
     "install": "^0.13.0",
-    "leaflet": "^1.6.0",
     "json2csv": "^5.0.0",
+    "leaflet": "^1.6.0",
     "node-sass": "^4.13.1",
     "npm": "^6.14.3",
     "react": "^16.13.1",
@@ -33,7 +34,8 @@
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix .",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\"",
-    "scsslint": "sass-lint-auto-fix"
+    "scsslint": "sass-lint-auto-fix",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
