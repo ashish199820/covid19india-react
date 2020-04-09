@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "02c3ad517323bc615bea410bbec43c30",
+    "revision": "454fb1b3775ae83f7c0e3fa98d02cb1f",
     "url": "/covid19india-react/index.html"
   },
   {
-    "revision": "3fabfce6fc6568f19479",
-    "url": "/covid19india-react/static/css/2.7c35e809.chunk.css"
+    "revision": "d861c29874661ec88218",
+    "url": "/covid19india-react/static/css/2.89b7f2ea.chunk.css"
   },
   {
-    "revision": "9569dbacabcfd3002f77",
-    "url": "/covid19india-react/static/css/main.12ac48f8.chunk.css"
+    "revision": "fa21fddb754c98718c19",
+    "url": "/covid19india-react/static/css/main.43feb157.chunk.css"
   },
   {
-    "revision": "3fabfce6fc6568f19479",
-    "url": "/covid19india-react/static/js/2.30b6118f.chunk.js"
+    "revision": "d861c29874661ec88218",
+    "url": "/covid19india-react/static/js/2.3f8e0e6e.chunk.js"
   },
   {
     "revision": "278be41389e3536a5347a9018737729d",
-    "url": "/covid19india-react/static/js/2.30b6118f.chunk.js.LICENSE.txt"
+    "url": "/covid19india-react/static/js/2.3f8e0e6e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9569dbacabcfd3002f77",
-    "url": "/covid19india-react/static/js/main.f6c4bb7c.chunk.js"
+    "revision": "fa21fddb754c98718c19",
+    "url": "/covid19india-react/static/js/main.e214c4cc.chunk.js"
   },
   {
     "revision": "8819e20e7fdba0eb096b",
@@ -124,11 +124,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/covid19india-react/static/media/archia-thin-webfont.e88f1cf3.woff2"
   },
   {
-    "revision": "64ae62e24eac3e9c1936db593d016413",
-    "url": "/covid19india-react/static/media/corona.64ae62e2.svg"
+    "revision": "abc39b8c924a6682232fad401e3de516",
+    "url": "/covid19india-react/static/media/green.abc39b8c.svg"
   },
   {
-    "revision": "ad278ccf53703609ea9580a295d6b28e",
-    "url": "/covid19india-react/static/media/icon.ad278ccf.svg"
+    "revision": "1573897f29178b670ed5d5ed92c7d0aa",
+    "url": "/covid19india-react/static/media/red.1573897f.svg"
   }
 ]);
