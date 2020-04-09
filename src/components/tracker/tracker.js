@@ -19,23 +19,19 @@ const [currentLocation,setCurrentLocation]=useState(null);
 const [error,setError] =useState(false);
 const [invalidPin,setInvalidPin]=useState(false);
 const [receiveData,setReceiveData]=useState(null);
-const header={
-  'Access-Control-Allow-Origin': '*'
-}
- 
+const [loc,setLoc]=useState(null)
 
-useEffect(()=>{
-  if(currentLocation){
-    
+const fetchData=(list)=>{
   axios.get(URL+'/tracker',{
     params:{
-      latitude:currentLocation[0],
-      longitude:currentLocation[1]
+      latitude:list[0],
+      longitude:list[1]
     }
    
   }).then(response=>{
     reset=true;
     console.log(response.data);
+        
         setReceiveData(response.data);
   })
   .catch(err=>{
@@ -43,26 +39,30 @@ useEffect(()=>{
     setError(true);
   })
 }
-},[currentLocation])
-
 
 const inputHandler=(event)=>{
     const val  = event.target.value;
     console.log(val);   
     setInputData(val)
 }
+
+
 const getLocationHandler = (event)=>{
   reset=false;
+  console.log('location clicked')
     event.preventDefault()
     navigator.geolocation.getCurrentPosition(position=>{
     setCurrentLocation([position.coords.latitude,position.coords.longitude])
     setError(false);
+    fetchData([position.coords.latitude,position.coords.longitude]);
     },error=>{
-        console.log(error);
+        console.log('unavle to fetch',error);
         setError(true);
 
     })
 }
+
+
 
 const clickListener=()=>{
   console.log('clicked');
@@ -74,6 +74,8 @@ const clickListener=()=>{
     if(!response.data.PIN_validity){
       setInvalidPin(true);
     }
+
+  
     else{
       pinLocation=[response.data.lat,response.data.lng]
       reset=true;
@@ -92,6 +94,7 @@ const searchHandler = (data)=>{
   reset=false;
 console.log('successful',data.lat,data.lng );
 setCurrentLocation([data.lat,data.lng]);
+fetchData([data.lat,data.lng]);
 
 }
   return (
@@ -101,8 +104,8 @@ setCurrentLocation([data.lat,data.lng]);
   <br/>
   <h1 >NearBy Cases</h1>
    </div>
-  {error?<p style={{color:"red",textAlign:'center'}}>Error fetching location</p>:null}
-  {reset&&<Display>{receiveData.cases} at distance of {receiveData.minDist} KM :{receiveData.district}</Display>}
+  {error?<p style={{color:"red",textAlign:'center'}}>Turn your location ON</p>:null}
+  {reset&&receiveData&&<Display>You are within {receiveData.minDist} KM from nearest affected  location {receiveData.district} with {receiveData.cases} positive casses. </Display>}
   <div  style={{color:"red",textAlign:'center'}}>{isNaN(input)||invalidPin?'please enter valid pincode':null}</div>
   
     <div className="tracker_bar">
@@ -138,7 +141,7 @@ setCurrentLocation([data.lat,data.lng]);
       pinLocation={pinLocation}
       />
       </div>
-     
+     <div id="control"></div>
     </div>
     
     )

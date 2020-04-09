@@ -10,7 +10,7 @@ import * as Icon from 'react-feather';
 import './App.scss';
 
 import Home from './components/home';
-import Tracker from './components/tracker'
+import Tracker from './components/tracker/tracker'
 import Navbar from './components/navbar';
 import Links from './components/links';
 import FAQ from './components/faq';

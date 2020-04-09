@@ -12,8 +12,10 @@ class Search extends Component {
     searchControl.on("results", function(data) {
       results.clearLayers();
       //   for (let i = data.results.length - 1; i >= 0; i--) {}
+      if(data.result[0])
       search(data.results[0].latlng)
-        results.addLayer(L.marker(data.results[0].latlng));
+
+      results.addLayer(L.marker(data.results[0].latlng));
       
     });
   }

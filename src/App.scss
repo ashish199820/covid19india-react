@@ -253,12 +253,7 @@ h6 {
   }
 }
 
-.leaflet-container {
-  width: 98%;
-  height: 80vh;
-  margin:auto
- 
-}
+
 .Banner {
   display: flex;
   flex-direction: row;
@@ -2255,11 +2250,131 @@ select {
   }
 
   table {
+    
     td {
       max-width: 6.75rem;
     }
   }
 }
+
+.tracker_hospital{
+    width:100%;
+    margin-top: 20px;
+    border:2px solid $secondary;
+    border-radius: 5px;
+    height:200px;
+    overflow-y: scroll;
+    color:black;
+    & button{
+      color:$indigo
+    }
+    @media(min-width:700px)
+    {
+      height: 60vh;
+      margin-top: 0;
+      width:48%;
+      padding:10px
+    }
+    &>div{
+      background: $secondary;
+    }
+  
+  & .row{
+    opacity: 0.70;
+    border-bottom: 2px solid black;
+    display:flex;
+    justify-content: space-evenly;
+    div{
+      padding:10px
+    }
+    div:nth-of-type(odd){
+     width:25%;
+    }
+    div:nth-of-type(even){
+      width:50%;
+     }
+    
+  }
+  
+  .row.highlighted,.row:hover{
+   
+    box-shadow: 3px 3px 15px #666;
+    border-color:#C76C0C;
+  
+    color: #fff;
+    cursor: pointer;
+    zoom: 1.1;
+    opacity: 1;
+  }
+}
+.row.highlighted:hover{
+  box-shadow: 3px 3px 15px #666;
+    border-color:#C76C0C;
+    background: #C76C0C;
+    color: #fff;
+    cursor: pointer;
+    zoom: 1.1;
+    opacity: 1;
+}
+.map-container{
+  @media(min-width: 700px){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &>div:first-of-type{
+    width: 100%;
+  }
+& span{
+color:$orange;
+margin:auto;
+&.button{
+  color:black;
+  display: inline;
+}
+}
+
+}
+.leaflet-container {
+  width: 98%;
+  height: 50vh;
+  margin:auto;
+@media(min-width: 700px)
+{
+  width:100%;
+  margin-left:0;
+  height: 60vh;
+}
+ 
+}
+.tracker-map{
+ & div:first-of-type{
+   width:150px;
+   @media(min-width: 700px){
+     width:250px
+   }
+ }
+
+ 
+
+  .leaflet-routing-alt {
+    background:$info
+    
+    
+  }
+  & td, th {
+    font-size: 10px;
+  }
+  
+ & tr{
+    font-size: 10px;
+    max-width: 60px;
+    margin-left: 10px;
+    padding-left: 0;
+    display:flex
+  }
+}
+
 .tracker_display
 {
    margin-top: 30px;
@@ -2273,41 +2388,35 @@ select {
     border-right: 6px solid rgba(0,0,0, 0.75);
     font-size: 5vw;
     text-align: center;
-     white-space:nowrap;
+     
+
     overflow:hidden;transform: translateY(-50%);
 }
 
 /*Animation*/
 
 .anim-typewriter {
-    animation: typewriter 3s steps(40) 1s 1  normal both,
-    blinkTextCursor 500ms steps(40)  6  forwards;
+    animation: typewriter 2s  ease-out 1  normal both,
+   
 }
 
 @keyframes typewriter {
     from {
-          width: 0;
+          opacity:0;
+          color:transparent
     }
     to {
-          width: 100%;
+          opacity: 1;
+          color:green
     }
 }
 
-@keyframes blinkTextCursor {
-    from {
-          border-right-color: rgba(0, 0, 0, 0.75);
-    }
-    to {
-          border-right-color: transparent;
-    }
-}
 
 }
 .tracker{
   padding: 7px;
   position: relative;
-  
-  
+  background: darkslategrey;
 
 
   
@@ -2352,11 +2461,6 @@ select {
 
 
   }
-    
-
-
-    
-  
 }
 
 
