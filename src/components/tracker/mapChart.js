@@ -34,7 +34,7 @@ const [click,setClick]=useState(false);
       
 useEffect(()=>{
   console.log('component updated')
-})
+},[activeList,direction])
 const markerToList=(id)=>{
 refs[id].current.scrollIntoView({block:'center', behavior: 'smooth'})
 setActiveList(id)

@@ -21,12 +21,12 @@ const history = require('history').createBrowserHistory;
 
 function App() {
   const pages = [
-    {
-      pageLink: '/',
-      view: Home,
-      displayName: 'Home',
-      animationDelayForNavbar: 0.2,
-    },
+    // {
+    //   pageLink: '/',
+    //   view: Home,
+    //   displayName: 'Home',
+    //   animationDelayForNavbar: 0.2,
+    // },
     /* {
       pageLink: '/database',
       view: PatientDB,
@@ -39,18 +39,18 @@ function App() {
       displayName: 'trackers',
       animationDelayForNavbar: 0.4,
     },
-    {
-      pageLink: '/links',
-      view: Links,
-      displayName: 'Helpful Links',
-      animationDelayForNavbar: 0.5,
-    },
-    {
-      pageLink: '/faq',
-      view: FAQ,
-      displayName: 'FAQ',
-      animationDelayForNavbar: 0.6,
-    },
+    // {
+    //   pageLink: '/links',
+    //   view: Links,
+    //   displayName: 'Helpful Links',
+    //   animationDelayForNavbar: 0.5,
+    // },
+    // {
+    //   pageLink: '/faq',
+    //   view: FAQ,
+    //   displayName: 'FAQ',
+    //   animationDelayForNavbar: 0.6,
+    // },
   ];
 
   return (
