@@ -34,7 +34,7 @@ function App() {
       animationDelayForNavbar: 0.3,
     },*/
     {
-      pageLink: '/tracker',
+      pageLink: '/',
       view: Tracker,
       displayName: 'trackers',
       animationDelayForNavbar: 0.4,

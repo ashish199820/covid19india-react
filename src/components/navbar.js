@@ -20,7 +20,7 @@ function Navbar(props) {
           transition: 'all 0.3s ease-in-out',
         }}
       >
-        <img
+        {/* <img
           className="fadeInUp logo"
           alt="India COVID-19 Tracker"
           src="/icon.png"
@@ -30,7 +30,7 @@ function Navbar(props) {
             height: window.location.pathname === '/clusters' ? '1.5rem' : '',
             transition: 'all 0.3s ease-in-out',
           }}
-        />
+        /> */}
 
         <div className="navbar-left">
           {props.pages.map((page, i) => {

@@ -1,9 +1,9 @@
 import React,{useState, useEffect,useRef} from 'react';
 import { Map, Marker, Popup, TileLayer,Circle,CircleMarker,withLeaflet} from "react-leaflet";
-import {ReactComponent as RedIcon} from './red.svg'
 import L, { marker } from 'leaflet';
 import Search from './search'
-import './corona.svg'
+import './red.svg';
+import './green.svg'
 import RoutingMachine from './routing'
 import 'leaflet/dist/leaflet.css'
 var research = require('../../hospital.json')
